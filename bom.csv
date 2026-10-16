@@ -1,0 +1,21 @@
+Item Name,Qty,Price (total) (USD),Item link,Notes
+330 Ω 0603 resistor [Uni-Royal 0603WAF3300T5E],100,$0.26,https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0603WAF3300T5E_C23138.html,Must purchase 100 in order to source the 1 resistor needed.         Purpose: To protect LED backlights and ensure stable signal transmission.
+0.1 µF Ceramic Capacitors [Samsung Electro-Mechanics CL10B104KB8NNNC],100,$0.79,https://www.lcsc.com/product-detail/C1591.html,Must purchase 100 in order to source the 67 capacitors needed.   Purpose: to smooth out power fluctuations and subsequently prevent LEDs from glitching or resetting
+74AHCT1G125 Level Shifter [TI SN74AHCT1G125DBVR],5,$0.50,https://www.lcsc.com/product-detail/C7484.html,Must  purchase 5 in order to source the 1 level shifter needed.      Purpose: To translate the low 3V3 voltage data from the RP2040 Zero to the higher level required by the LEDs
+Fast Switching Diode [Changzhou Starsea Elec 1N4148],100,$1.34,https://www.lcsc.com/product-detail/C85057.html,Must  purchase 100 in order to source the 67 diodes needed.        Purpose: Used in matrix wiring to prevent ghosting from keyboard
+SK6812 MINI-E Addressable LEDs,70,$4.56,https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_OPSCO-Optoelectronics-SK6812MINI-E_C5149201.html,Must  purchase 70 in order to source the 66 diodes needed.          Purpose: To add programmable backlighting to keyboard (Price is higher here than on Half-Life submission because I already own some LEDs)
+PCB,1,$19.00,https://github.com/ReuTheCoder/bolide-65-keeb/blob/main/assets/bolide-pcb_quote.png,Uses default PCB settings on JLCPCB
+"Womier Pudding Keycaps,  Black PBT Shine Through (130 Keycap Set)",1,$12.61,https://www.amazon.ca/Womier-Pudding-Keyboard-Switches-Keyboard-Black/dp/B0D4DN5HK1?source=ps-sl-shoppingads-lpcontext&smid=AZ1RQDED92VC&th=1,Keycap choice is not mandatory. Can choose other keycap set; see through recommended
+"PCB Mount Screw In Stabilizers (1x 6.25u, 4x 2u)",1,$4.72,https://www.amazon.ca/Mechanical-Keyboard-Stabilizers-Stabilizer-Backlight/dp/B0GS7HQJP6?source=ps-sl-shoppingads-lpcontext&th=1,Stabilizer choice is not mandatory.. Can choose other screw in stabilizer set
+Glorious Fox Linear Mechanical Switches (110 pcs),1,$23.09,https://www.amazon.ca/Glorious-Linear-Mechanical-Switches-Keyboards/dp/B0D7QW8SQ9/ref=pd_rhf_dp_s_pd_crcd_d_sccl_2_2/142-2623382-8190419?pd_rd_w=N9TW7&content-id=amzn1.sym.db0cabc9-3101-4abd-a708-693101cbc296&pf_rd_p=db0cabc9-3101-4abd-a708-693101cbc296&pf_rd_r=X0XF2N9P9SKDEEZ0JG4Q&pd_rd_wg=DsLHD&pd_rd_r=42983987-2f36-40de-b8c0-a3e2db3e17d2&pd_rd_i=B0D7QW8SQ9&th=1,Switch choice is not mandatory. Can choose other MX-style switch
+Waveshare RP2040 Zero,1,$4.20,https://ca.robotshop.com/products/rp2040-zero-pico-like-mcu-board-based-on-rp2040-mini-version-w-o-header,Ensure you have pin headers
+EC11 Rotary Encoder,1,$2.22,https://www.lcsc.com/product-detail/C202365.html&ref=https%3A%2F%2Fwww.lcsc.com%2Fproduct-detail%2FC202365.html,Excluded from half-life submission as it is already owned
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+Total Price (USD):,$73.29,,,
