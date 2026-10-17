@@ -5,7 +5,7 @@ Bolide65 is a 66 key, 65% keyboard with a rotary encoder and RGB backlighting un
 
 ## Features
 
-- 66 Cherry MX-compatible keys in a custom 65% layout (including PgUp, PgDn, and one spare key)
+- 66 Cherry MX-compatible keys in a custom 65% layout
 - EC11 rotary encoder (push button enabled)
 - RP2040-Zero microcontroller (USB-C) using QMK firmware
 - 66 reverse mount SK6812MINI-E RGB LEDs on a single data chain
@@ -14,11 +14,11 @@ Bolide65 is a 66 key, 65% keyboard with a rotary encoder and RGB backlighting un
 - 4 PCB mounted stabilizers
 
 ## Layout
-<img src="assets/bolide-keeb_layout.jpeg" alt="PCB Layout" width="100%"> 
+<img src="assets/bolide-keeb_layout.png" alt="PCB Layout" width="100%"> 
 
 *The keymap layout (`Bolide65_Layout.json`) was made with [Keyboard Layout Editor NG](https://editor.keyboard-tools.xyz/).
 
-A 6.25u screw-in stabilizers is needed for the Backspace key, while 2u screw-in stabilizers are needed for the Enter, Left Shift, and Space keys. Any 65% compatible keycap set will work with this project. The one listed in the BOM was chosen for its see-through effect and low cost.
+A 6.25u screw-in stabilizers is needed for the Backspace key, while 2u screw-in stabilizers are needed for the Enter, Left Shift, and Space keys. Any 65% compatible keycap set will work with this project. The one listed in the BOM was chosen for its see-through effect and low cost. The blank space in the top-right corner of the keymap is on purpose, as it leaves room for the microcontroller and the encoder. The blank keys is meant to be a custom macro.
 
 ## PCB
 [![View PCB on KiCanvas](https://hack.club/pcb-badge)](https://kicanvas.org/?repo=https://github.com/reuthecoder/bolide-65-keeb/tree/main/pcb)
@@ -31,7 +31,6 @@ The microcontroller, LEDs, diodes, resistors, and capacitors are meant to be sol
 
 The project is split across three sheets: the root sheet (microcontroller, level shifter, LED capacitors, stabilizers), the key matrix, and the LED chain.
 
-<!-- DO ASAP: add schematic screenshots -->
 ![Screenshot of root schematic](assets/bolide-schematic_root.png)
 ![Screenshot of key matrix schematic](assets/bolide-schematic_matrix.png)
 ![Screenshot of LED chain schematic](assets/bolide-schematic_RGB.png)
@@ -60,10 +59,10 @@ All the components needed for this keyboard:
 - 1x Waveshare RP2040-Zero
 - 1x EC11 rotary encoder with push switch, plus a knob
 
+A more detailed BOM can be found in `bom.csv`
 ## Additonal Notes
 
 This was my second ever PCB project and I am quite satisfied with what I could get done in a week! Below is an explanation of some technical choices I made for my PCB schematics:
-- The blank space in the top-right corner of the keymap is on purpose, as it leaves room for the microcontroller and the encoder.
 - No hotswap; this keyboard is meant to have all its components hand soldered to it. It's cheaper, and I wanted to get more soldering experience.
 - The encoder's push button is wired throough the matrix (9 columns by 8 rows) so it can be used when pushed (function not decided yet) while its rotation pins go straight to the microcontroller GPIO.
 - To protect my LEDs and ensure stable signal transmission, its data chain passes through the level shifter (U2) and a 330 Ω series resistor (R1) before LED1, and every LED has its own 0.1 µF decoupling capacitor (C2-C67), with C1 for the shifter. I did not add a bulk capacitor, so brightness should be capped in firmware to stay within USB power limits.
