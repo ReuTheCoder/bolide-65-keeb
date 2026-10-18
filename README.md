@@ -40,11 +40,15 @@ The project is split across three sheets: the root sheet (microcontroller, level
 <!-- DO ASAP: add PCB screenshots -->
 ![Screenshot of PCB in KiCad](assets/bolide65-pcb.png)
 
-## Firmware & CAD
+## Firmware 
+The QMK firmware the keyboard microcontroller must be flashed with includes the matrix, encoder, and RGB matrix settings for the RP2040. Some notable firmware features are:
+- Each function (F1, F2, etc) does not have its own button. Rather, each function can be accessed through the number row while holding down the `fn` key.
+- The spare macro key switches through backlighting animations (normal press goes to next and shift goes back) and pressing it while on the `fn` setting changes the LED color.
+- This keyboard uses the Grave Escape, so a plain press acts as the escape key, pressing shift inputs `~` and pressing it while on the `fn` setting inputs the backtick `.
 
-QMK firmware for this board and the case design will be published later as they were not able to be completed within the 1 week timeframe of this project.
+## CAD
 
-<!-- DO ASAP: configure in QMK with the matrix, encoder, and RGB matrix settings for the RP2040. -->
+The case design will be published later as it was not able to be completed within the 1 week timeframe of this project.
 
 ## Bill of Materials [BOM]:
 All the components needed for this keyboard:
