@@ -52,18 +52,21 @@ The case design will be published later as it was not able to be completed withi
 
 ## Bill of Materials [BOM]:
 All the components needed for this keyboard:
-- 66x MX-style switches 
-- 66x keycaps (matching key sizes specifed in additonal notes)
-- 4x stabilizers (3x 2u, 1x 6.25u) 
-- 67x through-hole 1N4148 diodes (DO-35)
-- 66x SK6812 MINI-E LEDs (reverse mount)
-- 67x 0.1 µF X7R 0603 capacitors (smd)
-- 1x 330 Ω 0603 resistor (smd)
-- 1x 74AHCT1G125 level shifter (SOT-23-5, use the AHCT version, not AHC)
-- 1x Waveshare RP2040-Zero
-- 1x EC11 rotary encoder with push switch, plus a knob
 
-A more detailed BOM can be found in `bom.csv`
+| Qty | Part | Reference | Notes |
+|---|---|---|---|
+| 66 | MX-style switches | SW1-SW66 | |
+| 66 | Keycaps | | Matching key sizes specified in additional notes |
+| 4 | Stabilizers | | 3x 2u, 1x 6.25u |
+| 67 | 1N4148 diodes | D1-D67 | Through-hole (DO-35) |
+| 66 | SK6812 MINI-E LEDs | LED1-LED66 | Reverse mount |
+| 67 | 0.1 µF X7R capacitors | C1-C67 | 0603, SMD |
+| 1 | 330 Ω resistor | R1 | 0603, SMD |
+| 1 | 74AHCT1G125 level shifter | U2 | SOT-23-5, use the AHCT version, not AHC |
+| 1 | Waveshare RP2040-Zero | U1 | |
+| 1 | EC11 rotary encoder with push switch | ENC1 | Plus a knob |
+
+A more detailed BOM with vendor links and prices can be found in `bom.csv`
 ## Additonal Notes
 
 This was my second ever PCB project and I am quite satisfied with what I could get done in a week! Below is an explanation of some technical choices I made for my PCB schematics:
