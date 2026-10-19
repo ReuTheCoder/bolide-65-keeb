@@ -1,7 +1,7 @@
 # Bolide65
 Bolide65 is a 66 key, 65% keyboard with a rotary encoder and RGB backlighting under each key. It was built as my Week 1 submission for Hack Club's [Half-Life](https://halflife.hackclub.com/projects/cmunbffu2003001lze9z86fa2) program, in which I was challenged to design a PCB in one week.
 
-<img src="assets/bolide-pcb_front.png" alt="PCB 3D" width="100%"> 
+<img src="assets/readme/bolide-pcb_front.png" alt="PCB 3D" width="100%"> 
 
 ## Features
 
@@ -14,7 +14,7 @@ Bolide65 is a 66 key, 65% keyboard with a rotary encoder and RGB backlighting un
 - 4 PCB mounted stabilizers
 
 ## Layout
-<img src="assets/bolide-keeb_layout.png" alt="PCB Layout" width="100%"> 
+<img src="assets/readme/bolide-keeb_layout.png" alt="PCB Layout" width="100%"> 
 
 *The keymap layout (`Bolide65_Layout.json`) was made with [Keyboard Layout Editor NG](https://editor.keyboard-tools.xyz/).
 
@@ -31,14 +31,14 @@ The microcontroller, LEDs, diodes, resistors, and capacitors are meant to be sol
 
 The project is split across three sheets: the root sheet (microcontroller, level shifter, LED capacitors, stabilizers), the key matrix, and the LED chain.
 
-![Screenshot of root schematic](assets/bolide-schematic_root.png)
-![Screenshot of key matrix schematic](assets/bolide-schematic_matrix.png)
-![Screenshot of LED chain schematic](assets/bolide-schematic_RGB.png)
+![Screenshot of root schematic](assets/readme/bolide-schematic_root.png)
+![Screenshot of key matrix schematic](assets/readme/bolide-schematic_matrix.png)
+![Screenshot of LED chain schematic](assets/readme/bolide-schematic_RGB.png)
 
 **PCB:**
 
 <!-- DO ASAP: add PCB screenshots -->
-![Screenshot of PCB in KiCad](assets/bolide65-pcb.png)
+![Screenshot of PCB in KiCad](assets/readme/bolide65-pcb.png)
 
 ## Firmware 
 The QMK firmware the keyboard microcontroller must be flashed with includes the matrix, encoder, and RGB matrix settings for the RP2040. Some notable firmware features are:
