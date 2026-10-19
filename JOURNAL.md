@@ -7,9 +7,11 @@ created_at: "2026-10-05"
 
 # October 6: Initial Brainstorming + Research and Final Plan
 
+**(For context, this project was originally meant to be a submission for the Half-Lie YSWS, where I needed to create a PCB in under a week and had a budget of $65 for the keyboard PCB. The first few journals are written with my thinking I am making this kyboard for Half-Life.)**
+
 From the start of Week 1, I knew that I wanted to design and build a custom mechanical keyboard. Creating a keyboard was already something I had been interested in (due to the KEEB YSWS), and Half Life gave me the motivation to finally begin the project.
 
-Since Monday, I have spent approximately 2.4 hours brainstorming and researching keyboard design. This consisted of two dedicated 2 hour research/discovery sessions, along with additional idea development throughout during small spare moments in my day, such as lunch breaks and my train rides to and from school. Based on my browser history, Google Docs revision history, and the time spent sketching concepts, I feel that 2.4 hours is a fair estimate of my work so far.
+Since Monday, I have spent approximately 2.4 hours brainstorming and researching keyboard design. This consisted of two dedicated 2 hour research/discovery sessions, along with additional idea development throughout during small spare moments in my day, such as lunch breaks and my train rides to and from school. Based on my browser history, Google Docs revision history, and the time spent sketching concepts, I feel that 2.6 hours is a fair estimate of my work so far.
 
 During this research process, I learned about and decided on different keyboard layouts and form factors, mechanical switch types (linear, tactile, and clicky), keycap profile options, adding custom macro functionality, and general keyboard construction methods! I am now super ready to begin making my schematic! The Hack Club KEEB YSWS guide was especially helpful in helping me get my foot in the door with regards to understanding the overall design process and the components required for a custom keyboard. I put my notes and brainstorming ideas on a google doc and then polished it up with my final design idea:
 
@@ -40,7 +42,7 @@ Did a work session this evening where I focused on starting the PCB schematic fo
 
 I spent the first few minutes of my session ensuring I have sucessfully imported right symbols and footprints I will need for my schematic. I specifcally had to upload the schematic for the RP2040 Zero (the microcontroller I chose to use for this project) and download the marblastlib library from the ebastler KiCAD Repository (has all the keyboard specific symbols and footprints I will need). I had to keep pausing the timelaspe so I could do some extra reading regarding the components I was using and the way I was setting up my schematic to ensure I was not messing up anywhere.
 
-Afterwards, I got to start on the keyboard matrix as I figured it would take most of my time. For my keyboard matrix, I am using 9 columns and 8 rows to connect all 66 keys and the clicker function of my rotary enocder to the RP2040. I was planning to work for two hours, but cut the session short as some delays made me work a bit later than I wanted and I realized I may have incorrectly planned for how many keys would be in the last row of my matrix. I'll double check my work and hopefully finish the schematic tommorow.
+Afterwards, I got to start on the keyboard matrix as I figured it would take most of my time. For my keyboard matrix, I am using 9 columns and 8 rows to connect all 66 keys and the clicker function of my rotary enocder to the RP2040. With this configuration, the RP2040 Zero has just enough GPIO pins left over for all the components I want to include in this keyboard. I was planning to work for two hours, but cut the session short as some delays made me work a bit later than I wanted and I realized I may have incorrectly planned for how many keys would be in the last row of my matrix. I'll double check my work and hopefully finish the schematic tommorow.
 
 ![schematic in progress](assets/journal/bolide-journal-WIP_matrix.jpeg)
 
@@ -69,3 +71,44 @@ I then began making my LED daisy chain. I went into it thinking I could create a
 (I added a bit more extra time from my timelapse to account for one moment I forgot to unpause my recording when adjusting the LED symbol names as well as the preliminary time I spent confirming my schematic plan with datasheets)
 
 **Total time spent: 2.02 hours**
+
+# October 9: Working on Data Chain
+
+Today, I figured out what else my LED daisy chain needs! I learned that due to keyboards being significantly larger than macropads, they are more likey to experience electrical noise and voltage fluctuations that could cause my LEDs to glitch or become damaged. As a result, I decided I will be adding a level shifter (increases the 3V3 output of the RP2040 Zero to the 5V the LEDs need), a resistor at the start of the chain (to prevent the LEDs from drawing too much current and dampen high frequency signal reflections) and ceramic capacitors near each LED (to smooth out voltage fluctuations when a bunch of LEDs change color at once, preventing flickering or wrong color changes). I also considered adding a bulk capacitor to further help with brightness issues, but I found I can just limit the brightness of the LEDs in the firmware to achieve the same protection.
+
+I was pretty sucessful with adding most of the symbols for the chain but was struggling to fit the capacitors to the schematic sheet. To be honest, I was a bit confused at first on how to connect them because I didn't fully understand how it electrically worked. However, after looking at some examplars online, the full image of how the capaciotrs worked finally revealed itself in my mind and I realized I can just connect the capcitors seperately to the 5V and GND on my schematic. However, its getting late so I will contiue tommorow.
+
+[**Laspe Recording**](https://lapse.hackclub.com/timelapse/V8r73G1_ybjy)
+
+**Total time spent: 0.47 hours**
+
+# October 10: Grinding on PCB Work
+
+I quickly finished adding those extra LED components to my schematic and then began assigning footprints. One issue I ran into as I was doing this was that I did not use the same 1.00u footprint fro each of my keys. Each key was assigned a footprint accoridng to its size (1.75u, 2.00u, etc). One thing I did not know is that for footprints above 2.00u, the holes for the key stabilizers were included in the footprint, meaning I did not need to include individual MX stabilizers in my design. After debating on if I wanted change my switch footprints, or rather delete my stabilizer footprints and use the combined switch and stabilizer footprint instead, I went with the latter. 
+
+I then spent almost 4 hours placing all my components. Although I was able to slightly speed up my time using KiCad's kbplacer plugin to *only* ensure all my switches were located in the correct place, I still had to do the tedious task of placing all of my diodes and capacitors. I then began routing my PCB, starting with the rows of my matrix as I think they are the least complicated part of the PCB. I shall continue the grind tommorow.
+
+[**Laspe Recording: Finishing Schematic & Assigning Footprints**](https://lapse.hackclub.com/timelapse/EN6MxEgE_b9F)
+[**Laspe Recording: Assigning LED footprints**](https://lapse.hackclub.com/timelapse/V5P0em_uG-3q)
+[**Laspe Recording: Starting PCB Layout**](https://lapse.hackclub.com/timelapse/ldH9hXX4tdMm)
+[**Laspe Recording: PCB Footprint Placement and Routing**](https://lapse.hackclub.com/timelapse/btrU3aZw4Mqe)
+
+**Total time spent: 5.05 hours**
+
+# October 11: The PCB is DONE!
+
+![DONE](assets/journal/bolide-journal-done_pcb.jpeg)
+
+I decided to get up extra early to complete my PCB routing. Something I though would be quick to do quickly turned into a grueling work. I repeatedly had to redo my routing because the layers in which I choose to do my routes contributed to a messier layout. However, I eventually gave up and began using vias galore. (I believe the final design pictured has 459 vias total.😬) One major contribution to my via useage was the fact that when I thought I was done with all my routing, I opened the Design Rules Checker and was shocked to find over 400 errors. Desperate to clear the list, I stopped caring about the aesthetics and just spammed vias until things connected. I think over half my time was spent just fixing the DRC errors. 🫩 
+
+![front](assets/journal/bolide-journal-front.jpeg)
+![back](assets/journal/bolide-journal-back.jpeg)
+
+This was definitely due to my inexperience with PCB making in general. For instance, I discovered that I had accidentally placed one section of my LEDs in a way that made tracing it talking only a seconds rather than a couple of minutes, proving I may have made a few inefficient choices during my footprint placement. I also incorrectly assumed that a copper ground pour would automatically link up all my ground components to a ground plane (which heavily contributed to my DRC errors) I hope as I continue to make hardware projects I get more conformable with making efficient routes and better traces.
+
+(I am adding extra time to account for the time I spent updating my BOM as I was making my PCB)
+
+[**Laspe Recording: Routing**](https://lapse.hackclub.com/timelapse/-45GtTBscDO9)
+[**Laspe Recording: It's FINALLY done**](https://lapse.hackclub.com/timelapse/HCnOruETElv0)
+
+**Total time spent: 7.59 hours**
