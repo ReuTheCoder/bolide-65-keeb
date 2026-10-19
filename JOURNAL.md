@@ -76,6 +76,8 @@ I then began making my LED daisy chain. I went into it thinking I could create a
 
 Today, I figured out what else my LED daisy chain needs! I learned that due to keyboards being significantly larger than macropads, they are more likey to experience electrical noise and voltage fluctuations that could cause my LEDs to glitch or become damaged. As a result, I decided I will be adding a level shifter (increases the 3V3 output of the RP2040 Zero to the 5V the LEDs need), a resistor at the start of the chain (to prevent the LEDs from drawing too much current and dampen high frequency signal reflections) and ceramic capacitors near each LED (to smooth out voltage fluctuations when a bunch of LEDs change color at once, preventing flickering or wrong color changes). I also considered adding a bulk capacitor to further help with brightness issues, but I found I can just limit the brightness of the LEDs in the firmware to achieve the same protection.
 
+
+![image of new component symbols](assets/journal/bolide-journal-new_components.jpeg)
 I was pretty sucessful with adding most of the symbols for the chain but was struggling to fit the capacitors to the schematic sheet. To be honest, I was a bit confused at first on how to connect them because I didn't fully understand how it electrically worked. However, after looking at some examplars online, the full image of how the capaciotrs worked finally revealed itself in my mind and I realized I can just connect the capcitors seperately to the 5V and GND on my schematic. However, its getting late so I will contiue tommorow.
 
 [**Laspe Recording**](https://lapse.hackclub.com/timelapse/V8r73G1_ybjy)
@@ -84,14 +86,23 @@ I was pretty sucessful with adding most of the symbols for the chain but was str
 
 # October 10: Grinding on PCB Work
 
+![capcitor placement](assets/journal/bolide-journal-capacitors.png)
+![assignment](assets/journal/bolide-journal-assigning_footprints.png)
+
 I quickly finished adding those extra LED components to my schematic and then began assigning footprints. One issue I ran into as I was doing this was that I did not use the same 1.00u footprint fro each of my keys. Each key was assigned a footprint accoridng to its size (1.75u, 2.00u, etc). One thing I did not know is that for footprints above 2.00u, the holes for the key stabilizers were included in the footprint, meaning I did not need to include individual MX stabilizers in my design. After debating on if I wanted change my switch footprints, or rather delete my stabilizer footprints and use the combined switch and stabilizer footprint instead, I went with the latter. 
+
+![stabilizer footprints](assets/journal/bolide-journal-Stabilzer_issue.jpeg)
 
 I then spent almost 4 hours placing all my components. Although I was able to slightly speed up my time using KiCad's kbplacer plugin to *only* ensure all my switches were located in the correct place, I still had to do the tedious task of placing all of my diodes and capacitors. I then began routing my PCB, starting with the rows of my matrix as I think they are the least complicated part of the PCB. I shall continue the grind tommorow.
 
 [**Laspe Recording: Finishing Schematic & Assigning Footprints**](https://lapse.hackclub.com/timelapse/EN6MxEgE_b9F)
+
 [**Laspe Recording: Assigning LED footprints**](https://lapse.hackclub.com/timelapse/V5P0em_uG-3q)
+
 [**Laspe Recording: Starting PCB Layout**](https://lapse.hackclub.com/timelapse/ldH9hXX4tdMm)
+
 [**Laspe Recording: PCB Footprint Placement and Routing**](https://lapse.hackclub.com/timelapse/btrU3aZw4Mqe)
+
 
 **Total time spent: 5.05 hours**
 
