@@ -95,13 +95,13 @@ I quickly finished adding those extra LED components to my schematic and then be
 
 I then spent almost 4 hours placing all my components. Although I was able to slightly speed up my time using KiCad's kbplacer plugin to *only* ensure all my switches were located in the correct place, I still had to do the tedious task of placing all of my diodes and capacitors. I then began routing my PCB, starting with the rows of my matrix as I think they are the least complicated part of the PCB. I shall continue the grind tommorow.
 
-[**Laspe Recording: Finishing Schematic & Assigning Footprints**](https://lapse.hackclub.com/timelapse/EN6MxEgE_b9F)
+[**Laspe Recording:** Finishing Schematic & Assigning Footprints](https://lapse.hackclub.com/timelapse/EN6MxEgE_b9F)
 
-[**Laspe Recording: Assigning LED footprints**](https://lapse.hackclub.com/timelapse/V5P0em_uG-3q)
+[**Laspe Recording:** Assigning LED footprints](https://lapse.hackclub.com/timelapse/V5P0em_uG-3q)
 
-[**Laspe Recording: Starting PCB Layout**](https://lapse.hackclub.com/timelapse/ldH9hXX4tdMm)
+[**Laspe Recording:** Starting PCB Layout](https://lapse.hackclub.com/timelapse/ldH9hXX4tdMm)
 
-[**Laspe Recording: PCB Footprint Placement and Routing**](https://lapse.hackclub.com/timelapse/btrU3aZw4Mqe)
+[**Laspe Recording:** PCB Footprint Placement and Routing**](https://lapse.hackclub.com/timelapse/btrU3aZw4Mqe)
 
 
 **Total time spent: 5.05 hours**
@@ -119,7 +119,45 @@ This was definitely due to my inexperience with PCB making in general. For insta
 
 (I am adding extra time to account for the time I spent updating my BOM as I was making my PCB)
 
-[**Laspe Recording: Routing**](https://lapse.hackclub.com/timelapse/-45GtTBscDO9)
-[**Laspe Recording: It's FINALLY done**](https://lapse.hackclub.com/timelapse/HCnOruETElv0)
+[**Laspe Recording:** Routing](https://lapse.hackclub.com/timelapse/-45GtTBscDO9)
+
+[**Laspe Recording:** It's FINALLY done](https://lapse.hackclub.com/timelapse/HCnOruETElv0)
 
 **Total time spent: 7.59 hours**
+
+# October 17: Polishing PCB
+
+I took a bit of a break as I was quite busy this week. Yesterday, I spent about 30 minutes actually completing my `BOM.csv` with all the components I would need for my PCB assembly. Today, I spent some time polishing my PCB and completing some basic firmware so I can test my PCB once its assembled. 
+
+Regarding my PCB polish, I decided I actually did not like having a bunch of silkscreen warnings and worked on clearing our my DRC report completely. Once I had achieved two green zeros, I added some custom text to the silkscreen to personalize y PCB a bit more.
+
+![code](assets/journal/bolide65-journal-pcb_polished.png)
+
+Reagarding my firmware, I used QMK as it is the firmware platfrom I am most familiar with (used it to make my macropad). I also appreciate I don't have to write much code for my keyboard if I use `qmk new-keyboard` in the QMK MSYS as it gives you "template" code that matches standard layouts and common microcontrollers. I only used AI only to adjust the `keyboard.json` matrix positons to accurately mathc my custom layout. Otherwise, I ordered the LED matrix according to the "S" path I arranged them in when making my PCB and gave standard functionality to all my keys. Based on my sister's suggestions, I made it so my rotary controller controls volume and that my custom macro key (on the bottom row) changes the backlighting color. (I'm just writing this here as a future note to self: enabled rotary encoder to controled LED brightness on `fn` mode).
+
+Unfortunately, the time tracked on hackatime was added to the previous firmware work I did for my macropad, so I can;t ink my hackatime to my project. I saw able to get a screenshot of the time I worked specifically for just this keyboard though:
+
+![hackatime](assets/journal/bolide-journal-hackatime.png)
+
+![code](assets/journal/bolide-journal-code.png)
+
+I hope my firmware works right off the bat. I was (eventually) able to compile it with no issues (I had accidently mispelled a line of code, causing the whole `keymap.c` file to not register) so I am hoping for the best. I'm going to start working on the case tommorow.
+
+**Total time spent: 2.65 hours**
+
+# October 18: Starting to use CAD
+
+Before I actually began to CAD, I spent a bit of time adding most of the 3D models for my PCB components so I had an accurate reference to use when making my case design. I decided to use Onshape for my case design (despite previously using Fusion360 for my macropad) as it is a CAD platform I would like to get comfortable with and I thought it would be slightly less laggy than when using Fusion (something I am not sure is true after using it). Once I actually began my to CAD, I ran into an issue of how to properly align my top plate (which I generated using the [ai03 Plate Generator](https://kbplate.ai03.com/) with my keymap .json I made in the keyboard layout editor) to my PCB. At first I though I could just enter it in a rectangle with my PCB diemensions but that quickly proved to be difficult. I eventually realized it would be easier to do so my editing it in context in an assembly file with my PCB 3D model.
+
+![code](assets/journal/bolide-journal-cad_begins.png)
+
+I'm debating whether I shoudl design this for a resin print through JLC PCB or stick with PLA printing (as they appear to be similar prices - depending on the resin I choose). Hopefully I decide by tomorrow.
+
+[**Lapse Recording:** Starting Keyboard Case](https://lapse.hackclub.com/timelapse/YFk4QdU-h-rW)
+
+[**Lapse Recording:** Completing Top Plate](https://lapse.hackclub.com/timelapse/dwQVN7j-ZHKL)
+
+It was at this point where I realised I should switch this project to a different hardware YSWS because I knew I would not be able to complete my Week 2 submission in time. Now that is project is on Hackclub's [Forge YSWS](https://forge.hackclub.com/), I can take my time to create a keyboard I ma pround of and my sister is happy with!
+
+**Total time spent: 2.07 hours**
+
