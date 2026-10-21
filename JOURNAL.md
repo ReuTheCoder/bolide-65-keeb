@@ -7,11 +7,11 @@ created_at: "2026-10-05"
 
 # October 6: Initial Brainstorming + Research and Final Plan
 
-**(For context, this project was originally meant to be a submission for the Half-Lie YSWS, where I needed to create a PCB in under a week and had a budget of $65 for the keyboard PCB. The first few journals are written with my thinking I am making this kyboard for Half-Life.)**
+**(For context, this project was originally meant to be a submission for the Half-Lie YSWS, where I needed to create a PCB in under a week and had a budget of $65 for the keyboard PCB. The first few journals are written with my thinking I am making this keyboard for Half-Life.)**
 
 From the start of Week 1, I knew that I wanted to design and build a custom mechanical keyboard. Creating a keyboard was already something I had been interested in (due to the KEEB YSWS), and Half Life gave me the motivation to finally begin the project.
 
-Since Monday, I have spent approximately 2.4 hours brainstorming and researching keyboard design. This consisted of two dedicated 2 hour research/discovery sessions, along with additional idea development throughout during small spare moments in my day, such as lunch breaks and my train rides to and from school. Based on my browser history, Google Docs revision history, and the time spent sketching concepts, I feel that 2.6 hours is a fair estimate of my work so far.
+Since Monday, I have spent approximately 2.4 hours of pure brainstorming and researching keyboard design. This consisted of two dedicated 2 hour research/discovery sessions, along with additional idea development throughout during small spare moments in my day, such as lunch breaks and my train rides to and from school. Based on my browser history, Google Docs revision history, and the time spent sketching concepts, I feel that 2.6 hours is a fair estimate of my work so far.
 
 During this research process, I learned about and decided on different keyboard layouts and form factors, mechanical switch types (linear, tactile, and clicky), keycap profile options, adding custom macro functionality, and general keyboard construction methods! I am now super ready to begin making my schematic! The Hack Club KEEB YSWS guide was especially helpful in helping me get my foot in the door with regards to understanding the overall design process and the components required for a custom keyboard. I put my notes and brainstorming ideas on a google doc and then polished it up with my final design idea:
 
@@ -147,7 +147,7 @@ I hope my firmware works right off the bat. I was (eventually) able to compile i
 
 # October 18: Starting to use CAD
 
-Before I actually began to CAD, I spent a bit of time adding most of the 3D models for my PCB components so I had an accurate reference to use when making my case design. I decided to use Onshape for my case design (despite previously using Fusion360 for my macropad) as it is a CAD platform I would like to get comfortable with and I thought it would be slightly less laggy than when using Fusion (something I am not sure is true after using it). Once I actually began my to CAD, I ran into an issue of how to properly align my top plate (which I generated using the [ai03 Plate Generator](https://kbplate.ai03.com/) with my keymap .json I made in the keyboard layout editor) to my PCB. At first I though I could just enter it in a rectangle with my PCB diemensions but that quickly proved to be difficult. I eventually realized it would be easier to do so my editing it in context in an assembly file with my PCB 3D model.
+Before I actually began to CAD, I spent a bit of time adding most of the 3D models for my PCB components so I had an accurate reference to use when making my case design. Thank you to [GrabCAD](https://grabcad.com/library/cherry-mx-stabilizer-mx-1) and the [scottokeebs](https://github.com/joe-scotto/scottokeebs/tree/main/Extras/ScottoKicad/3dmodels) Github for some of the 3D models I needed! I decided to use Onshape for my case design (despite previously using Fusion360 for my macropad) as it is a CAD platform I would like to get comfortable with and I thought it would be slightly less laggy than when using Fusion (something I am not sure is true after using it). Once I actually began my to CAD, I ran into an issue of how to properly align my top plate (which I generated using the [ai03 Plate Generator](https://kbplate.ai03.com/) with my keymap .json I made in the keyboard layout editor) to my PCB. At first I though I could just enter it in a rectangle with my PCB diemensions but that quickly proved to be difficult. I eventually realized it would be easier to do so my editing it in context in an assembly file with my PCB 3D model.
 
 ![code](assets/journal/bolide-journal-cad_begins.png)
 
@@ -161,3 +161,30 @@ It was at this point where I realised I should switch this project to a differen
 
 **Total time spent: 2.07 hours**
 
+# October 19: CAD Continues
+
+Did a quick work session today after finishing my homework. I polished up my top plate and got to work on my middle plate. I’m not going for a high profile look (where the bottom of the switches are hidden by the case) because want to highlight the transparent switches I chose for this keyboard. The reason I have a top and middle plate is because the middle plate is meant to be a transparent or translucent decorative piece that shines a beam of light through the case. The top plate hold the PCBs, and the middle plate kind of acts like a support. 
+
+I also decided I will go with resin printing (primarily because I won’t have to slice my keyboard case due to it being too wide and also because it has less noticeable layer lines). The walls are 3mm as I read anything thicker is more probable to cause warping or unnecessary stresses to the keyboard.
+
+![image of CAD](assets/journal/bolide-journal-top_plate_WIP.png)
+
+Now that I have the length and width of my keyboard solidified, I can figure out the height of my bottom case. From what I have seen online, a good ergonomic height for keyboards is 18mm. I want my keyboard to have a 5° incline, so I got to do some trig with my keyboard width to figure out how tall the end of my bottom case should be.
+
+[**Laspe Recording**](https://lapse.hackclub.com/timelapse/5f_QfFB462Bp)
+
+**Total time spent: 0.53 hours**
+
+# October 20: The Case is Taking Shape
+
+As I was planning my bottom case dimensions I realized I forgot on critical thing: *SCREWS*! I completely ignored the fact I actually had to design a way to hold the case together. I have a bunch of M3x16mm screws and M3 heatset inserts, so I decided I wanted to use those. You can’t actually use a solder to insert heat set inserts, so it’s recommended that you glue it into a resin print. After a bit of research, I determined will need a 8.5mm cylinder in each corner of my case in order to have enough space to fit my screws (as my walls are too thin and my PCB is in the way) so I spent this CAD session readjusting my top plate and middle case dimensions to accommodate these holes.
+
+![case after session](assets/journal/bolide-journal-taking_shape.png)
+
+Afterwards I began make the bottom case. Using trigonometry (Height Difference = Case Depth * tan(5°)), I have determined my case has an approximately 4.7° incline. There were so many instances were I was stuck just because I did not know how to use an Onshape feature properly. For instance, when I tried to sketch out the left wall for the bottom case enclosure, the sketch kept being drawn on the right side of the keyboard enclosure. I eventually figured out that I had to add a plane to the left face of my case which I wanted to make the sketch on, but did not realize I had to set the offset to zero. On the bright side, I can definitely see my Onshape knowledge improving.
+
+![image of be struggling to make left wall](assets/journal/bolide-journal-onshape_be_ragebaiting.png)
+
+[**Laspe Recording**](https://lapse.hackclub.com/timelapse/fnvAShl7yg8w)
+
+**Total time spent: 2.08 hours**
