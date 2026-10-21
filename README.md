@@ -1,5 +1,5 @@
 # Bolide65
-Bolide65 is a 66 key, 65% keyboard with a rotary encoder and RGB backlighting under each key. It was built as my Week 1 submission for Hack Club's [Half-Life](https://halflife.hackclub.com/projects/cmunbffu2003001lze9z86fa2) program, in which I was challenged to design a PCB in one week.
+Bolide65 is a 66 key, 65% keyboard with a rotary encoder and RGB backlighting under each key. It was built as a submission to Hack Club's [Forge](https://forge.hackclub.com/) YSWS program.
 
 <img src="assets/readme/bolide-pcb_front.png" alt="PCB 3D" width="100%"> 
 
@@ -37,7 +37,6 @@ The project is split across three sheets: the root sheet (microcontroller, level
 
 **PCB:**
 
-<!-- DO ASAP: add PCB screenshots -->
 ![Screenshot of PCB in KiCad](assets/readme/bolide65-pcb.png)
 
 ## Firmware 
@@ -65,7 +64,7 @@ All the components needed for this keyboard:
 | PCB Mount Screw In Stabilizers (1x 6.25u, 4x 2u) | 1 | $4.72 | [Amazon](https://www.amazon.ca/Mechanical-Keyboard-Stabilizers-Stabilizer-Backlight/dp/B0GS7HQJP6?source=ps-sl-shoppingads-lpcontext&th=1) | Stabilizer choice is not mandatory. Can choose other screw in stabilizer set. 3x 2u, 1x 6.25u |
 | Glorious Fox Linear Mechanical Switches (110 pcs) | 1 | $23.09 | [Amazon](https://www.amazon.ca/Glorious-Linear-Mechanical-Switches-Keyboards/dp/B0D7QW8SQ9?th=1) | Switch choice is not mandatory. Can choose other MX-style switch |
 | Waveshare RP2040 Zero | 1 | $4.20 | [RobotShop](https://ca.robotshop.com/products/rp2040-zero-pico-like-mcu-board-based-on-rp2040-mini-version-w-o-header) | Ensure you have pin headers |
-| EC11 Rotary Encoder | 1 | $2.22 | [LCSC](https://www.lcsc.com/product-detail/C202365.html) | Excluded from half-life submission as it is already owned. Plus a knob |
+| EC11 Rotary Encoder | 1 | $2.22 | [LCSC](https://www.lcsc.com/product-detail/C202365.html) | |
 | **Total Price (USD):** | | **$73.29** | | |
 ## Additonal Notes
 
