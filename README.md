@@ -1,13 +1,17 @@
 # Bolide65
 Bolide65 is a 66 key, 65% keyboard with a rotary encoder and RGB backlighting under each key. It was built as a submission to Hack Club's [Forge](https://forge.hackclub.com/) YSWS program.
 
+![DONE](assets/journal/bolide-journal-IM_DONE_XD.png)
+
+I was inspired to pursue this project after my sister's laptop's keyboard began acting up, preventing her from using the *t* and *u* key. She has to wait awhile before she can get a new laptop, so decided to make a keyboard for her in the meantime, using her design ideas (of incorporationg lights) to make the keyboard and consulting her on its appearance and functionality throughout the process. Not only am I helping my sister, but this project really helped me gain more hardware experience (especially regarding routing and CAD).
+
 <img src="assets/readme/bolide-pcb_front.png" alt="PCB 3D" width="100%"> 
 
 ## Features
 
-- 66 Cherry MX-compatible keys in a custom 65% layout
+- 66 Cherry MX-compatible switch footprints in a custom 65% layout
 - EC11 rotary encoder (push button enabled)
-- RP2040-Zero microcontroller (USB-C) using QMK firmware
+- RP2040 Zero microcontroller (USB-C) using QMK firmware
 - 66 reverse mount SK6812MINI-E RGB LEDs on a single data chain
     - 74AHCT1G125 level shifter on the LED data line (3.3 V to 5 V) 
 - 2-layer PCB with GND copper pours on both sides
@@ -25,7 +29,7 @@ A 6.25u screw-in stabilizers is needed for the Backspace key, while 2u screw-in 
 
 This is the PCB (307x101mm) I made for Bolide65, made in KiCad 10.0. Most of the footprints came from the [Marbastlib](https://github.com/ebastler/marbastlib) library, the microcontroller footprint was sourced from [SnapMagic](https://www.snapeda.com/parts/RP2040-ZERO/Waveshare%20Electronics/view-part/), and anything else came from KiCad's default libraries. I used the kbplacer plugin to correctly arrage the switches according to my keymap. 
 
-The microcontroller, LEDs, diodes, resistors, and capacitors are meant to be soldered to the back of the board, while everything else is soldered tot the front. It is a 2 layer PCB with GND copper pours on both sides, and DRC passes with only silkscreen warnings. (No errors) 
+The microcontroller, LEDs, diodes, resistors, and capacitors are meant to be soldered to the back of the board, while everything else is soldered tot the front. It is a 2 layer PCB with GND copper pours on both sides, and DRC passes with only silkscreen warnings. (No errors)
 
 **Schematic:**
 
@@ -47,7 +51,9 @@ The QMK firmware the keyboard microcontroller must be flashed with includes the 
 
 ## CAD
 
-The case design will be published later as it was not able to be completed within the 1 week timeframe of this project.
+The PCB enclosure, designed in [Onshape](https://cad.onshape.com/documents/e99e54822f92a5f5925595cc/w/6180f1e1b18eeb4808e4ffdc/e/0a846f45fd57540ab5465ead?renderMode=0&leftPanel=false&uiState=6ad9a2dd98262f828faa99c4), utilizes a 'reverse' sandwich keyboard mount style: the top plate is the top most layer and there is a transluscent middle part that allows light to diffuse through the case and give a streak of color to the enclosure design (like a bolide does to the night sky). The case is designed for 4 M3x16mm screws, which are meant to screw into M3 heatset inserts with a 5mm OD and 4mm height. The inserts are inserted into the bottom case. Although the rotary encoder has a custom knob, keycaps are meant to be outsourced. See through keycaps are recommneded fo rthis keyboard design.
+
+![DONE](assets/readme/bolide-CAD.png)
 
 ## Bill of Materials [BOM]:
 All the components needed for this keyboard:
@@ -66,14 +72,16 @@ All the components needed for this keyboard:
 | Waveshare RP2040 Zero | 1 | $4.20 | [RobotShop](https://ca.robotshop.com/products/rp2040-zero-pico-like-mcu-board-based-on-rp2040-mini-version-w-o-header) | Ensure you have pin headers |
 | EC11 Rotary Encoder | 1 | $2.22 | [LCSC](https://www.lcsc.com/product-detail/C202365.html) | |
 | **Total Price (USD):** | | **$73.29** | | |
+
 ## Additonal Notes
 
 This was my second ever PCB project and I am quite satisfied with what I could get done in a week! Below is an explanation of some technical choices I made for my PCB schematics:
-- No hotswap; this keyboard is meant to have all its components hand soldered to it. It's cheaper, and I wanted to get more soldering experience.
-- The encoder's push button is wired throough the matrix (9 columns by 8 rows) so it can be used when pushed (function not decided yet) while its rotation pins go straight to the microcontroller GPIO.
+- No hotswap; this keyboard is meant to have all its components hand soldered to it. It's cheaper, and I wanted to get more soldering experience through this project.
+- The encoder's push button is wired through the matrix (9 columns by 8 rows) so it can be used when pushed (function not decided yet) while its rotation pins go straight to the microcontroller GPIO.
 - To protect my LEDs and ensure stable signal transmission, its data chain passes through the level shifter (U2) and a 330 Ω series resistor (R1) before LED1, and every LED has its own 0.1 µF decoupling capacitor (C2-C67), with C1 for the shifter. I did not add a bulk capacitor, so brightness should be capped in firmware to stay within USB power limits.
 
 **Keycap Sizes**
+
 | Key | Size |
 |---|---|
 | Backspace | 2u |
@@ -84,7 +92,7 @@ This was my second ever PCB project and I am quite satisfied with what I could g
 | Space | 6.25u |
 | All remaining keys | 1u |
 
-Many thanks to the creators of Marbastlib and kbplacer for making my life easier. Also, I would like to say thank you so much to the organizers of [Forge](https://forge.hackclub.com/) and those at the [HackClub](https://hackclub.com/) hq for this wonderful hardware exploration opportunity!
+Many thanks to the creators of Marbastlib and kbplacer for making my life easier during the design process. Also, I would like to say thank you so much to the organizers of [Forge](https://forge.hackclub.com/) and those at the [HackClub](https://hackclub.com/) hq for this wonderful hardware exploration opportunity!
 
 
 
