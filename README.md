@@ -83,6 +83,7 @@ This was my second ever PCB project and I am quite satisfied with what I could g
 - No hotswap; this keyboard is meant to have all its components hand soldered to it. It's cheaper, and I wanted to get more soldering experience through this project.
 - The encoder's push button is wired through the matrix (9 columns by 8 rows) so it can be used when pushed (function not decided yet) while its rotation pins go straight to the microcontroller GPIO.
 - To protect my LEDs and ensure stable signal transmission, its data chain passes through the level shifter (U2) and a 330 Ω series resistor (R1) before LED1, and every LED has its own 0.1 µF decoupling capacitor (C2-C67), with C1 for the shifter. I did not add a bulk capacitor, so brightness should be capped in firmware to stay within USB power limits.
+- The PCB folder contains the design files for an alternative top plate, where instead of 3D printing the top case, you can order it as FR4 (fiberglass) through a PCB provider. It's up to personal preference, as some prefer its sound. The white version may also match better with the 9600 Resin than the LEDO 6060 Resin. The price is about $22.10 to produce however. (Pro tip: Add your own custom silkscreen to personalize your own keyboard!)
 
 | Keycap | Size |
 |---|---|
