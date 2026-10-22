@@ -25,6 +25,7 @@ I was inspired to pursue this project after my sister's laptop's keyboard began 
 A 6.25u screw-in stabilizers is needed for the Backspace key, while 2u screw-in stabilizers are needed for the Enter, Left Shift, and Space keys. Any 65% compatible keycap set will work with this project. The one listed in the BOM was chosen for its see-through effect and low cost. The blank space in the top-right corner of the keymap is on purpose, as it leaves room for the microcontroller and the encoder. The blank keys is meant to be a custom macro.
 
 ## PCB
+
 [![View PCB on KiCanvas](https://hack.club/pcb-badge)](https://kicanvas.org/?repo=https://github.com/reuthecoder/bolide-65-keeb/tree/main/pcb)
 
 This is the PCB (307x101mm) I made for Bolide65, made in KiCad 10.0. Most of the footprints came from the [Marbastlib](https://github.com/ebastler/marbastlib) library, the microcontroller footprint was sourced from [SnapMagic](https://www.snapeda.com/parts/RP2040-ZERO/Waveshare%20Electronics/view-part/), and anything else came from KiCad's default libraries. I used the kbplacer plugin to correctly arrage the switches according to my keymap. 
@@ -55,23 +56,26 @@ The PCB enclosure, designed in [Onshape](https://cad.onshape.com/documents/e99e5
 
 ![DONE](assets/readme/bolide-CAD.png)
 
-## Bill of Materials [BOM]:
-All the components needed for this keyboard:
-
 | Item Name | Qty | Price (USD) | Item link | Notes |
 |---|---|---|---|---|
 | 330 Ω 0603 resistor [Uni-Royal 0603WAF3300T5E] | 100 | $0.26 | [LCSC](https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0603WAF3300T5E_C23138.html) | Must purchase 100 in order to source the 1 resistor needed. 0603, SMD |
 | 0.1 µF Ceramic Capacitors [Samsung Electro-Mechanics CL10B104KB8NNNC] | 100 | $0.79 | [LCSC](https://www.lcsc.com/product-detail/C1591.html) | Must purchase 100 in order to source the 67 capacitors needed. 0603, SMD |
 | 74AHCT1G125 Level Shifter [TI SN74AHCT1G125DBVR] | 5 | $0.50 | [LCSC](https://www.lcsc.com/product-detail/C7484.html) | Must purchase 5 in order to source the 1 level shifter needed. SOT-23-5, use the AHCT version, not AHC |
 | Fast Switching Diode [Changzhou Starsea Elec 1N4148] | 100 | $1.34 | [LCSC](https://www.lcsc.com/product-detail/C85057.html) | Must purchase 100 in order to source the 67 diodes needed. Through-hole (DO-35) |
-| SK6812 MINI-E Addressable LEDs | 70 | $4.56 | [LCSC](https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_OPSCO-Optoelectronics-SK6812MINI-E_C5149201.html) | Must purchase 70 in order to source the 66 LEDs needed. Reverse mount. (Price is higher here than on Half-Life submission because I already own some LEDs) |
-| Custom PCB | 1 | $19.00 | [JLCPCB](https://github.com/ReuTheCoder/bolide-65-keeb/blob/main/assets/bolide-pcb_quote.png) | Uses default PCB settings on JLCPCB |
+| SK6812 MINI-E Addressable LEDs | 70 | $4.56 | [LCSC](https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_OPSCO-Optoelectronics-SK6812MINI-E_C5149201.html) | Must purchase 70 in order to source the 66 LEDs needed. Reverse mount |
+| PCB | 1 | $19.00 | [JLCPCB](https://github.com/ReuTheCoder/bolide-65-keeb/blob/main/assets/bolide-pcb_quote.png) | Uses default PCB settings on JLCPCB |
 | Womier Pudding Keycaps, Black PBT Shine Through (130 Keycap Set) | 1 | $12.61 | [Amazon](https://www.amazon.ca/Womier-Pudding-Keyboard-Switches-Keyboard-Black/dp/B0D4DN5HK1?source=ps-sl-shoppingads-lpcontext&smid=AZ1RQDED92VC&th=1) | Keycap choice is not mandatory. Can choose other keycap set; see-through recommended. Matching key sizes specified in additional notes |
 | PCB Mount Screw In Stabilizers (1x 6.25u, 4x 2u) | 1 | $4.72 | [Amazon](https://www.amazon.ca/Mechanical-Keyboard-Stabilizers-Stabilizer-Backlight/dp/B0GS7HQJP6?source=ps-sl-shoppingads-lpcontext&th=1) | Stabilizer choice is not mandatory. Can choose other screw in stabilizer set. 3x 2u, 1x 6.25u |
 | Glorious Fox Linear Mechanical Switches (110 pcs) | 1 | $23.09 | [Amazon](https://www.amazon.ca/Glorious-Linear-Mechanical-Switches-Keyboards/dp/B0D7QW8SQ9?th=1) | Switch choice is not mandatory. Can choose other MX-style switch |
 | Waveshare RP2040 Zero | 1 | $4.20 | [RobotShop](https://ca.robotshop.com/products/rp2040-zero-pico-like-mcu-board-based-on-rp2040-mini-version-w-o-header) | Ensure you have pin headers |
-| EC11 Rotary Encoder | 1 | $2.22 | [LCSC](https://www.lcsc.com/product-detail/C202365.html) | |
-| **Total Price (USD):** | | **$73.29** | | |
+| EC11 Rotary Encoder | 1 | $2.22 | [LCSC](https://www.lcsc.com/product-detail/C202365.html) | CAD files have custom knob |
+| Bottom Case | 1 | $16.73 | [JLCPCB](https://github.com/ReuTheCoder/bolide-65-keeb/blob/main/assets/readme/bolide-CAD_quote.png) | Uses 9000HE Resin |
+| Middle Case | 1 | $3.22 | [JLCPCB](https://github.com/ReuTheCoder/bolide-65-keeb/blob/main/assets/readme/bolide-CAD_quote.png) | Uses Translucent 8001 Resin |
+| Top Plate | 1 | $4.66 | [JLCPCB](https://github.com/ReuTheCoder/bolide-65-keeb/blob/main/assets/readme/bolide-CAD_quote.png) | Uses LEDO 6060 Resin (too thin for 9600HE) |
+| Rotary Encoder Knob | 1 | $0.32 | [JLCPCB](https://github.com/ReuTheCoder/bolide-65-keeb/blob/main/assets/readme/bolide-CAD_quote.png) | Uses 9600 Resin |
+| M3x16mm screws | 4 | $8.69 | [Amazon](https://www.amazon.ca/uxcell-M3x16mm-Alloy-Socket-Screws/dp/B012T9FWEI) | Price is only for 12 screws; likely better price at local stores |
+| M3x5mmx4mm Heatset Inserts | 4 | $7.69 | [AliExpress](https://www.aliexpress.com/item/4000232858343.html) | Price is for 100pcs |
+| **Total Price (USD):** | | **$114.60** | | |
 
 ## Additonal Notes
 
@@ -80,9 +84,7 @@ This was my second ever PCB project and I am quite satisfied with what I could g
 - The encoder's push button is wired through the matrix (9 columns by 8 rows) so it can be used when pushed (function not decided yet) while its rotation pins go straight to the microcontroller GPIO.
 - To protect my LEDs and ensure stable signal transmission, its data chain passes through the level shifter (U2) and a 330 Ω series resistor (R1) before LED1, and every LED has its own 0.1 µF decoupling capacitor (C2-C67), with C1 for the shifter. I did not add a bulk capacitor, so brightness should be capped in firmware to stay within USB power limits.
 
-**Keycap Sizes**
-
-| Key | Size |
+| Keycap | Size |
 |---|---|
 | Backspace | 2u |
 | Tab, Backslash | 1.5u |
