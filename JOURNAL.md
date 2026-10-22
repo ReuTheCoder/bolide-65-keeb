@@ -208,3 +208,13 @@ However, it's all done now! I am considering pivioting my top plate to be made o
 [**Laspe Recording**: Evening Session](https://lapse.hackclub.com/timelapse/DU_oq926-Xdc)
 
 **Total time spent: 3.53 hours**
+
+# October 22: One Last Thing...
+
+After a little debate in my head I decided I would quickly whip up an alternative top plate design. This one uses the exact same layout as the CAD top plate (I just exported it's `.dxf` into KiCAD), but now instead of being 3D printed, its is made of FR4 (fiberglass). From what I've read online, this alternative top plate may produce a more satisfying sound when the switches are pressed. Also, the white PCB color may match better with the 9600 Resin, compared with the alternative resin i had to choose due to how thin my PCB was. I added it to the PCB folder and excluded it from the BOM as it is completely optional (and more expesnive).
+
+![Photo of alt top plate](assets/journal/bolide-journal-alt_top_plate.png)
+
+Hopefully the next log will be a build update!
+
+**Total time spent: 0.42 hours**
