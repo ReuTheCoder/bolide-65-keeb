@@ -18,7 +18,7 @@ During this research process, I learned about and decided on different keyboard 
 ![google docs](assets/journal/bolide-journal-docs_plan.jpeg)
 
 **Project Inspiration**
-This project will kill two birds with one stone: help develop my hardware skills and also help my sister. As I explained in my idea reel, I am designing this keyboard for my sister because a few of her keys on her laptop keyboard have stopped functioning properly. She has continuously expressed annoyance at how this makes completing school assignments much more frustrating. Since she will likely need to wait a whole year before replacing her laptop, I wanted to create an external keyboard that she can use in the meantime.
+This project will kill two birds with one stone: help develop my hardware skills and also help my younger sister. As I explained in my idea reel, I am designing this keyboard for my sister because a few of her keys on her laptop keyboard have stopped functioning properly. She has continuously expressed annoyance at how this makes completing school assignments much more frustrating. Since she will likely need to wait a whole year before replacing her laptop, I wanted to create an external keyboard that she can use in the meantime.
 
 **Design Explanation**
 I named the project “Bolide” because I want its LEDs to be a major part of its visual identity. The keyboard will feature LED backlighting and keycaps that allow the LEDs to shine through. I also plan to use a sandwich mounting design with a translucent top plate, allowing light to pass throughout the keyboard and emphasize its aestheticss
@@ -129,7 +129,7 @@ This was definitely due to my inexperience with PCB making in general. For insta
 
 I took a bit of a break as I was quite busy this week. Yesterday, I spent about 30 minutes actually completing my `BOM.csv` with all the components I would need for my PCB assembly. Today, I spent some time polishing my PCB and completing some basic firmware so I can test my PCB once its assembled. 
 
-Regarding my PCB polish, I decided I actually did not like having a bunch of silkscreen warnings and worked on clearing our my DRC report completely. Once I had achieved two green zeros, I added some custom text to the silkscreen to personalize y PCB a bit more.
+Regarding my PCB polish, I decided I actually did not like having a bunch of silkscreen warnings and worked on clearing our my DRC report completely. Once I had achieved two green zeros, I added some custom text to the silkscreen to personalize my PCB a bit more.
 
 ![code](assets/journal/bolide65-journal-pcb_polished.png)
 
@@ -188,3 +188,23 @@ Afterwards I began make the bottom case. Using trigonometry (Height Difference =
 [**Laspe Recording**](https://lapse.hackclub.com/timelapse/fnvAShl7yg8w)
 
 **Total time spent: 2.08 hours**
+
+# October 21: I'm DONE!
+
+![DONE](assets/journal/bolide-journal-IM_DONE_XD.png)
+
+After grinding out my CAD work throughout the day, the CAD is done!
+
+This morning, I had the intention of adding the screw holes to my case, but decided I was not happy with the case proportions. The clear middle plate is meant to be a key feature of my keyboard design, yet I left it as a small sliver of the whole case. I am much more happy with its proportions now. 
+
+Doing that took up my whole morning though, so when I came back home from school I began to work on the screw holes. After taking some time to figure out the exact dimensions I would need to fit my M3x16mm screws, it was a pretty straightforward process. I decided to screw my case from the top. I gave the top plate a hole with a diameter of 6.5mm to accomodate the size of the button head screw I will be using. The middle plate uses a counterbore that transitions the 6.5mm hole into a 3.2mm hole to guide the screw into the right place. The hole bottom case expand back out to 4.7mm so I can glue in my M3x5mmx4mm heatset insert into my PCB enclosure. Afterwards, I did a little polsihing, added the USB cutout and made a custom knob for my rotary encoder. Bonus: I finally remembered the dimensions tool! There were DEFINITELY a few instances before this where I could have really used that. Futher proof this project is jogging my memory of former CAD skills. On the other hand, I was pretty irritated when I realized as I was making a custom rotary encoder knob (the LAST thing I did) that I could just unhide sketches after I make an extrude. I though Onshape just got rid of the sketches from the workspace, so I kept redoing sketches I needed to reuse...when there was no reason to do so.
+
+(I decided I'm going to add 30 minutes to my total time to account for the time I spent researching and going over my measurements and calcuations to ensure everything will fit together correctly during assembly)
+
+However, it's all done now! I am considering pivioting my top plate to be made out of a White FR4 PCB plate, using a DXF generated from my CAD file (because the top plate is a bit too thin to print with cheap resin), but regardless, I can call the keyboard design process done!
+
+[**Laspe Recording**: Morning Session](https://lapse.hackclub.com/timelapse/OzhAD28hx0db)
+
+[**Laspe Recording**: Evening Session](https://lapse.hackclub.com/timelapse/DU_oq926-Xdc)
+
+**Total time spent: 3.53 hours**
