@@ -218,3 +218,22 @@ After a little debate in my head I decided I would quickly whip up an alternativ
 Hopefully the next log will be a build update!
 
 **Total time spent: 0.42 hours**
+
+# October 31: Fixes for Approval
+
+My project was returned for changes today. Here is what I was told:
+
+> Hey this is such a cool project! However, few things to fix before final approval.
+>
+> 1. Your CAD file should be in format of .step, instead of .zip. Please unzip the file and reupload. 
+>
+> 2. Please change cover image to your final design (with keyboard case).
+>
+
+So I quickly made those changes to my repo. As seen in the image, I was able to upload my assemby file as .step by using GitHub's large file storage. I also updated my cover image on my forge project to be the same on in the README with the keyboard case instead of just the PCB.
+
+![ifixeditandihopeitcanbeapproved](assets/journal/bolide-journal-wishing_for_approval.png)
+
+I'm excited to start building (hopefully) soon!
+
+**Total time spent: 0.08 hours**
